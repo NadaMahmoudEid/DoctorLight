@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="text-center text-lg-start">
+        <style>
+          .cascading-right {
+            margin-right: -50px;
+          }
+      
+          @media (max-width: 991.98px) {
+            .cascading-right {
+              margin-right: 0;
+            }
+          }
+        </style>
+      
+       
+        <div class="container py-4">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="card cascading-right" style="
+                  background: hsla(0, 0%, 100%, 0.55);
+                  backdrop-filter: blur(30px);
+                  ">
+                <div class="card-body p-5 shadow-5 text-center">
+                  <h2 class="fw-bold mb-5">قم بالتسجيل الان</h2>
+                  <form>
+                      <div class="row">
+                          <div class="col-md-6 mb-4">
+                              <div class="form-outline">
+                                  <input type="text" id="form3Example1" class="form-control" />
+                                  <label class="form-label" for="form3Example1">الاسم الاول</label>
+                              </div>
+                          </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input type="text" id="form3Example2" class="form-control" />
+                                <label class="form-label" for="form3Example2">اسم الاب</label>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                      <input type="email" id="form3Example3" class="form-control" />
+                      <label class="form-label" for="form3Example3">البريد الالكتروني</label>
+                    </div>
+                    
+                   
+                    <div class="row">
+                        <div class="form-outline col-md-6  mb-4">
+                            <input type="number" id="form3Example4" class="form-control" />
+                            <label class="form-label" for="form3Example4">العمر</label>
+                        </div>
+                        <div class="form-outline col-md-6 mb-4">
+                        <input type="number" id="form3Example4" class="form-control" />
+                        <label class="form-label" for="form3Example4">الطول</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-outline col-md-6 mb-4">
+                        <input type="number" id="form3Example4" class="form-control" />
+                        <label class="form-label" for="form3Example4">الوزن</label>
+                    </div>
+                    <div class="dropdown col-md-6 mb-4">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            معدل النشاط
+                          </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button">جري</button>
+                          <button class="dropdown-item" type="button">مشي</button>
+                          <button class="dropdown-item" type="button">جيم</button>
+                        </div>
+                      </div>
+                </div>
+                
+                
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" class="form-control" />
+                  <label class="form-label" for="form3Example4">كلمة السر</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" class="form-control" />
+                  <label class="form-label" for="form3Example4">تأكيد كلمة السر</label>
+                </div>
+                
+              
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                    تسجيل
+                </button>
+                
+                
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <img src="/assets/Medical Equipment Doctor Vector Hd PNG Images, Stethoscope Logo Medical Doctor Equipment, Black, Cardiac, Cardiology PNG Image For Free Download.jpg" class="w-100 rounded-4 shadow-4"
+                alt="" />
+            </div>
+          </div>
+        </div>
+    
+      </section>
+</body>
+</html>
+
+
+
+  <script>
+    const dropdownToggle = document.getElementById('dropdownMenuButton');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+  
+    dropdownToggle.addEventListener('click', function() {
+      dropdownMenu.classList.toggle('show');
+    });
+  </script>
