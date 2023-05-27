@@ -1,8 +1,29 @@
-
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Readex Pro', sans-serif;
+    overflow-x:hidden;
 }
+#bodyContent{
 
+background-image: url("../../../../assets/background.jpg");
+background-position-x: right;
+background-repeat: no-repeat;
+background-size: cover;
+background-position-y: top;
+
+}
+.contant1{
+    margin-left: auto;  padding-right: 12%;
+}
+#Doctor{
+    background-image: url("../../../../assets/doctor.jpg");
+    height: 38em;
+    background-position-x: center;
+
+}
+.container-fluid{
+    padding: 0;
+
+}
 .textColor {
     color: #2a5a94;
 }
@@ -114,11 +135,73 @@ input.searchInput::placeholder {
     background: #ffffffd4
 }
 
+.geeks{
+    width: 200px;
+    height: 2px;
+    position: relative;
+    top: 54%;
+    left: 37%;
+    transform: translate(-100%, -49%);
+}
+
+.geeks::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    animation: animate 6s linear infinite;
+}
+.geeks2 {
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    top: 150%;
+    background:#163A66;
+    left: 19%;
+    transform: translate(-50%, -50%);}
+.geeks2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    0% {
+        left: 0;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .brand {
         font-size: 18px;
     }
-
+    .contant1{
+        margin-left: auto;  padding-left: 44%;
+    }
+    .geeks2 {
+        width: 200px;
+        height: 2px;
+        position: absolute;
+        top:157%;
+        left: 18%;
+        transform: translate(-50%, -50%);}
     .brandSubHeading {
         font-size: 12px;
     }
@@ -140,8 +223,11 @@ input.searchInput::placeholder {
 
 /* body */
 #bodyContent {
-    min-height: calc(100vh - 77px)
-}
+    min-height: calc(100vh - 77px);
+
+
+
+    }
 
 .maintextColor {
     color: #1C4980;
@@ -156,3 +242,106 @@ input.searchInput::placeholder {
 .extraSmallFont.active {
     border-bottom: 2px solid #6195f5
 }
+.paragraph {
+   
+    font-size: 20px;
+    line-height: 1.5;
+    color:#163A66;
+    text-align: justify;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+paragraph:hover {
+    background-color: #e0e0e0;
+}
+.fixed-paragraph {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    bottom: 350px;
+    left: 10px;  
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.7);
+    animation: upAndDownAnimation 3s infinite;
+  }
+  
+  @keyframes upAndDownAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+.fixed-paragraph button {
+    margin-left: 10px;
+}
+
+.fixed-paragraph i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.fixed-paragraph i:hover {
+    color: #007bff;
+}
+.btnB{
+    background-color: #163A66;
+    color: #ccc;
+    }
+
+
+  .hiddenSectionForDoc {
+  
+    background: gray; /* Background color of the container */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 199;
+ 
+  }
+  
+ 
+  .card {
+    /* CSS styles for the card */
+  }
+  
+  .hidden {
+    display: none; /* Hide the div by default */
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .fixed-paragraph {
+    /* Your existing styles */
+  }
+  
+  .show-overlay {
+    display: block;
+  }
+  

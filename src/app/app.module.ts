@@ -6,23 +6,30 @@ import { HomeModule } from './Modules/home/home.module';
 import { UserModule } from './Modules/user/user.module';
 import { DoctorModule } from './Modules/doctor/doctor.module';
 import { SharedModule } from './Modules/shared/shared.module';
-import { LoginComponent } from './Modules/auth/login/login.component';
-import { RegisterComponent } from './Modules/auth/register/register.component';
+
+import { AuthModule } from './Modules/auth/auth.module';
+import { RouterLink, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     
-
-  ],
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     HomeModule,
-    
+   AuthModule,
     UserModule,
     DoctorModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    
+    RouterLink,
+          BrowserAnimationsModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],

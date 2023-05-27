@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    
     <section class="text-center text-lg-start">
         <style>
           .cascading-right {
@@ -26,7 +12,7 @@
           }
         </style>
       
-        <div class="container py-4">
+      <div class="container py-4">
           <div class="row g-0 align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
               <div class="card cascading-right" style="
@@ -34,26 +20,60 @@
                   backdrop-filter: blur(30px);
                   ">
                 <div class="card-body p-5 shadow-5 text-center">
-                 
-            <form>
-                <h2 class="fw-bold mb-5">تسجيل الدخول</h2>
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
-                  <label class="form-label" for="form3Example4">اسم المستخدم</label>
-                </div>
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
-                  <label class="form-label" for="form3Example4">كلمة السر</label>
-                </div>
-                
-              
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                    دخول
-                </button>
-                
-             
+                 <div class="ro"><h2 class="fw-bold mb-5"  style="color:#163A66;">تسجيل الدخول</h2></div>
+                  <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+
+                    <div class="form-outline mb-5">
+                      <div class="input-group">
+                       
+                          <input type="text" id="username" class="form-control text-center" formControlName="username"
+                           style="direction: rtl;  border:none; border-bottom: 1px solid gray;" placeholder="ادخل أسم المستخدم" />
+                              <span class="input-group-text">
+                                <i class="fa-solid fa-circle-user fa-lg"></i>
+                                                  </span>
+                                </div>
+                           <div *ngIf="UserName?.errors != null && UserName?.touched">
+                            <p *ngIf="UserName?.errors?.['required']" class="text-danger">
+                              ادخل اسم المستخدم
+                            </p>
+                            <p class="text-danger" *ngIf="UserName?.errors?.['minlength']">
+                              أدخل اسم المستخدم بحد أقل 5 أحرف.
+                            </p>
+                          </div>
+                        </div>
+                       
+
+                        <!--  -->
+                    <div class="form-outline mb-4">
+                      <div class="input-group">
+                        <input type="password" id="password" formControlName="password" 
+                        class="form-control text-center" style="direction: rtl; border:none; border-bottom: 1px solid gray;" 
+                        placeholder="ادخل كلمه السر" />
+                        <span class="input-group-text">
+                          <i class="fa fa-solid fa-lock"></i>
+                        </span>
+                      </div>
+
+                        <div *ngIf="password?.errors != null && password?.touched">
+                        <p *ngIf="password?.errors?.['required']" class="text-danger">
+                          برجاء ادخال كلمه السر
+                        </p>
+                        <p class="text-danger" *ngIf="password?.errors?.['minlength']">
+                          برجاء  أدخل كلمه المرور   بحد أقل 6 أحرف  
+                        </p>
+                        <p class="text-danger" *ngIf="password?.errors?.['maxlength']">
+                          برجاء  أدخل كلمه المرور   بحد أقل 10 أحرف  
+                        </p>
+                      </div>
+                    </div>
                     
+                    
+                  
+                    <button type="submit" id="loginBtn" class="btn btnB btn-block mb-4" [disabled]="LoginForm.invalid" (click)="GoPage()">
+                      دخول
+                    </button>
                   </form>
+                  
                 </div>
               </div>
             </div>
@@ -63,9 +83,8 @@
                 alt="" />
             </div>
           </div>
-        </div>
+        </div> 
         
-      </section>
-</body>
-</html>
+        
+
 
