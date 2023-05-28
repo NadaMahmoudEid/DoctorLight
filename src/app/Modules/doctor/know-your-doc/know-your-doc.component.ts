@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class KnowYourDocComponent {
 
+  appear: boolean = false;
+
+  change() {
+    console.log("asdasd")
+    this.appear = !this.appear;
+  }
+
 }

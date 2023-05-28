@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 <section class="text-center text-lg-start">
   <style>
     .cascading-right {
@@ -20,21 +23,22 @@
                   backdrop-filter: blur(30px);
                   ">
           <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">قم بالتسجيل الان</h2>
+            <h2 class="fw-bold mb-5" style="font-size: xx-large;">قم بالتسجيل الان</h2>
             <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit()">
               <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 my-4 ">
                   <div class="form-outline">
                     <div class="input-group">
-                     
-                      <input type="text" id="userName"  style="direction: rtl; border:none; border-bottom: 1px solid gray;" 
-                       formControlName="userName" class="form-control text-center"  placeholder="أدخل اسم   المستخدم مثلا Abc0"/>
-                          <span class="input-group-text fa-lg">
-                            <i class="fa-solid fa-circle-user"></i>
+
+                      <input type="text" id="userName"
+                        style="direction: rtl; border:none; border-bottom: 1px solid gray;" formControlName="userName"
+                        class="form-control text-center" placeholder="أدخل اسم   المستخدم مثلا Abc0" />
+                      <span class="input-group-text fa-lg">اسم المستخدم &nbsp;
+                        <i class="fa-solid fa-circle-user"></i>
                       </span>
-                      
+
                     </div>
-                    <label class="form-label" for="userName">أسم المستخدم</label>
+
                     <div *ngIf="UserName?.errors != null && UserName?.touched" class="error-messages">
                       <p *ngIf="UserName?.errors?.['required']" class="text-danger">
                         ادخل اسم المستخدم
@@ -44,20 +48,20 @@
                       </p>
                     </div>
                   </div>
-                  
+
                 </div>
                 <!--  -->
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 my-4">
                   <div class="form-outline">
                     <div class="input-group">
-                    <input type="text" id="fullName" formControlName="fullName" 
-                    style="direction: rtl; border:none; border-bottom: 1px solid gray;"
-                     class="form-control text-center" placeholder="أدخل الأسم كامل " />
-                     <span class="input-group-text">
-                      <i class="fa-solid fa-user"></i>
-                </span>
-                </div>   
-                <label class="form-label" for="fullName">الأسم كامل</label>
+                      <input type="text" id="fullName" formControlName="fullName"
+                        style="direction: rtl; border:none; border-bottom: 1px solid gray;"
+                        class="form-control text-center" placeholder="أدخل الأسم كامل " />
+                      <span class="input-group-text">الاسم كامل &nbsp;
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                    </div>
+                    <!-- <label class="form-label" for="fullName">الأسم كامل</label> -->
 
 
                     <div *ngIf="fullName?.errors != null && fullName?.touched">
@@ -71,21 +75,20 @@
                   </div>
                 </div>
               </div>
- <!--  -->
+              <!--  -->
               <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 my-4">
                   <div class="form-outline">
                     <div class="input-group">
-                    <input type="email" id="email" formControlName="email" 
-                     style="direction: rtl; border:none; border-bottom: 1px solid gray;"
-                     placeholder="Example@gmail.com"
-                    class="form-control text-center"/>
-                    <span class="input-group-text">
-                      <i class="fa-solid fa-envelope fa-lg"></i>
-                </span>
-                </div>  
+                      <input type="email" id="email" formControlName="email"
+                        style="direction: rtl; border:none; border-bottom: 1px solid gray;"
+                        placeholder="Example@gmail.com" class="form-control text-center" />
+                      <span class="input-group-text"> البريد الالكتروني &nbsp;
+                        <i class="fa-solid fa-envelope fa-lg"></i>
+                      </span>
+                    </div>
 
-                    <label class="form-label" for="email">البريد الالكتروني</label>
+                    <!-- <label class="form-label" for="email">البريد الالكتروني</label> -->
                     <div *ngIf="email?.errors != null && email?.touched">
                       <p *ngIf="email?.errors?.['required']" class="text-danger">
                         برجاء ادخال الايميل
@@ -97,20 +100,20 @@
                   </div>
                 </div>
                 <!--  -->
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 my-4">
                   <div class="form-outline">
                     <div class="input-group">
-                    <input type="email" id="phoneNumber" formControlName="phoneNumber"  
-                    style="direction: rtl; border:none; border-bottom: 1px solid gray;"
-                    class="form-control text-center" placeholder="010000000000" />
+                      <input type="email" id="phoneNumber" formControlName="phoneNumber"
+                        style="direction: rtl; border:none; border-bottom: 1px solid gray;"
+                        class="form-control text-center" placeholder="010000000000" />
 
-                    <span class="input-group-text">
-                      <i class="fa-solid fa-mobile fa-lg"></i>
-                        </span>
-                   </div>
+                      <span class="input-group-text">رقم تليفونك &nbsp;
+                        <i class="fa-solid fa-mobile fa-lg"></i>
+                      </span>
+                    </div>
 
 
-                    <label class="form-label" for="phoneNumber"> رقم التليفون</label>
+                    <!-- <label class="form-label" for="phoneNumber"> رقم التليفون</label> -->
 
                     <div *ngIf="phoneNumber?.errors != null && phoneNumber?.touched">
                       <p *ngIf="phoneNumber?.errors?.['required']" class="text-danger">
@@ -125,19 +128,19 @@
 
               </div>
 
-<!--  -->
+              <!--  -->
 
               <div class="row">
-                <div class="form-outline col-md-6  mb-4">
+                <div class="form-outline col-md-6  my-4">
                   <div class="input-group">
-                  <input type="number" min="15" id="age" formControlName="age"  
-                  style="direction: rtl; border:none; border-bottom: 1px solid gray;"
-                  class="form-control text-center" placeholder="35"/>
-                  <span class="input-group-text">
-                    <i class="fa fa-solid fa-lg ">age</i>
-              </span>
-              </div>  
-                  <label class="form-label" for="age">العمر</label>
+                    <input type="number" min="15" id="age" formControlName="age"
+                      style="direction: rtl; border:none; border-bottom: 1px solid gray;"
+                      class="form-control text-center" placeholder="35" />
+                    <span class="input-group-text">العمر &nbsp;
+                      <i class="fa fa-solid fa-0 fa-xl "></i>
+                    </span>
+                  </div>
+                  <!-- <label class="form-label" for="age">العمر</label> -->
                   <div *ngIf="age?.errors != null && age?.touched">
                     <p *ngIf="age?.errors?.['required']" class="text-danger">
                       برجاء ادخال عمرك
@@ -148,17 +151,16 @@
                   </div>
                 </div>
                 <!--  -->
-                <div class="form-outline col-md-6 mb-4">  
+                <div class="form-outline col-md-6 my-4">
                   <div class="input-group">
-                  <input type="number" id="height" formControlName="height"  style="direction: rtl;
-                   border:none; border-bottom: 1px solid gray;"
-                   placeholder="  175cm "
-                  class="form-control text-center" />
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-person fa-lg"></i>
-              </span>
-              </div>  
-                  <label class="form-label" for="form3Example4">الطول</label>
+                    <input type="number" id="height" formControlName="height" style="direction: rtl;
+                   border:none; border-bottom: 1px solid gray;" placeholder="  175cm "
+                      class="form-control text-center" />
+                    <span class="input-group-text">الطول &nbsp;
+                      <i class="fa-solid fa-person fa-lg"></i>
+                    </span>
+                  </div>
+                  <!-- <label class="form-label" for="form3Example4">الطول</label> -->
                   <div *ngIf="height?.errors != null && height?.touched">
                     <p *ngIf="height?.errors?.['required']" class="text-danger">
                       برجاء ادخال طولك
@@ -168,18 +170,17 @@
                 </div>
               </div>
 
-<!--  -->
+              <!--  -->
               <div class="row">
-                <div class="form-outline col-md-6 mb-4">
+                <div class="form-outline col-md-6 my-4">
                   <div class="input-group">
-                  <input type="number" id="form3Example4" formControlName="weight" style="direction: rtl; border:none;
-                   border-bottom: 1px solid gray;"
-                  class="form-control text-center" placeholder="75" />
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-weight-scale fa-lg"></i>
-              </span>
-              </div>  
-                  <label class="form-label" for="form3Example4">الوزن</label>
+                    <input type="number" id="weight" formControlName="weight" style="direction: rtl; border:none;
+                   border-bottom: 1px solid gray;" class="form-control text-center" placeholder="75 كيلو" />
+                    <span class="input-group-text">الوزن &nbsp;
+                      <i class="fa-solid fa-weight-scale fa-lg"></i>
+                    </span>
+                  </div>
+                  <!-- <label class="form-label" for="form3Example4">الوزن</label> -->
                   <div *ngIf="weight?.errors != null && weight?.touched">
                     <p *ngIf="weight?.errors?.['required']" class="text-danger">
                       برجاء ادخال وزنك
@@ -187,67 +188,139 @@
 
                   </div>
                 </div>
-<!--  -->
-                <div class="form-outline col-md-6 mb-4">
+                <!--  -->
+                <div class="form-outline col-md-6 my-4">
                   <div class="input-group">
-                  <input type="text" id="chronicDisease" formControlName="chronicDisease" 
-                  style="direction: rtl; border:none; border-bottom: 1px solid gray;"
-                  class="form-control text-center"
-                  placeholder="اذكر مرض مزمن اذا لديك" />
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-question fa-lg"></i>
-              </span>
-              </div>  
-                  <label class="form-label" for="chronicDisease">وجود مرض مزمن</label>
+                    <input type="text" id="chronicDisease" formControlName="chronicDisease"
+                      style="direction: rtl; border:none; border-bottom: 1px solid gray;"
+                      class="form-control text-center" placeholder="اذكر مرض مزمن اذا لديك" />
+                    <span class="input-group-text">وجود مرض &nbsp;
+                      <i class="fa-solid fa-question fa-lg"></i>
+                    </span>
+                  </div>
+                  <!-- <label class="form-label" for="chronicDisease">وجود مرض مزمن</label> -->
+                </div>
+
+
+              </div>
+              <!--  -->
+              <div class="row">
+                <div class="form-outline col-md-6 my-4">
+
+                  <div class="cont mb-3 ">
+                    <label class="form-label fw-bold  " style="font-size: x-large;" for="goal">نوع اكل لا تريده </label>
+                    <i class="fa-solid fa-face-angry fa-xl ms-2"></i>
+
+                  </div>
+
+                  <div class="">
+
+
+                    <input type="checkbox" name="lose" class="ms-2">
+                    <label style="margin-right: 20px; font-size: larger;" for="lose">لا يوجد </label>
+
+                    <input type="checkbox" name="lose" class="ms-2">
+                    <label style="margin-right: 20px; font-size: larger;" for="lose">سمك </label>
+
+                    <input type="checkbox" name="gain" class="ms-2">
+                    <label style="margin-right: 20px;  font-size: larger;" for="gain"> لحمه </label>
+
+                    <input type="checkbox" name="muscles" class="ms-2">
+                    <label style="margin-right: 20px;  font-size: larger;" for="muscles">فراخ </label>
+
+
+                  </div>
+
+
+
+                </div>
+                <!--  -->
+                <div class="form-outline col-md-6 my-4">
+
+                  <div class="cont input-group">
+
+                    <select id="mainDropdown" formControlName="Gender" style="direction: rtl;
+                  border:none; border-bottom: 1px solid gray;" class="form-control text-center">
+
+                      <option value="">
+
+                        حدد النوع
+                      </option>
+                      <option value="male">ذكر</option>
+                      <option value="female">أنثي</option>
+
+                    </select>
+
+                    <span class="input-group-text"> النوع &nbsp;
+                      <i>+-</i>
+                    </span>
+                  </div>
+                  <div *ngIf="Gender?.errors != null && Gender?.touched" class="error">
+                    <p *ngIf="Gender?.errors?.['required']" class="text-danger">
+                      اختار نوعك من فضلك
+                    </p>
+                  </div>
+
+
                 </div>
 
 
               </div>
 
-<!--  -->
-              <div class="row mt-3 mb-4">
-              
-            
-             <div class="cont ">
-                <label class="form-label fw-bold " for="goal">الهدف</label>
-                
-                  <i class="fa-solid fa-bullseye fa-xl ms-3"></i>
+              <!--  -->
+              <div class="row mt-3 my-4">
+
+
+                <div class="cont mb-3 ">
+                  <label class="form-label fw-bold  " style="font-size: x-large;" for="goal">الهدف</label>
+
+                  <i class="fa-solid fa-bullseye fa-xl ms-2"></i>
                 </div>
-           
+
                 <div class="">
-                  
-                  <input type="checkbox" name="lose">
-                  <label style="margin-right: 13px;" for="lose">خساره الوزن</label>
 
-                  <input type="checkbox" name="gain">
-                  <label style="margin-right: 13px;" for="gain">زياده الوزن </label>
+                  <input type="checkbox" name="lose" class="ms-2">
+                  <label style="margin-right: 20px; font-size: larger;" for="lose">خساره الوزن</label>
 
-                  <input type="checkbox" name="muscles">
-                  <label style="margin-right: 13px;" for="muscles">تكوين عضلات</label>
+                  <input type="checkbox" name="gain" class="ms-2">
+                  <label style="margin-right: 20px;  font-size: larger;" for="gain">زياده الوزن </label>
+
+                  <input type="checkbox" name="muscles" class="ms-2">
+                  <label style="margin-right: 20px;  font-size: larger;" for="muscles">تكوين عضلات</label>
 
                 </div>
 
 
               </div>
 
-<!--  -->
+              <!--  -->
               <div class="row my-5">
 
                 <div class="div col-lg-3 m-auto">
-                  <div class="cont">
-                    <label for="mainDropdown">معدل نشاط الجري</label>
-                    <i class="fa-solid fa-person-running fl-xxl ms-3"></i>
-                  
-                  </div>
-                
-                  <select id="mainDropdown" formControlName="optionsRun" style="direction: rtl;
+                  <div class="cont input-group">
+
+                    <select id="mainDropdown" formControlName="optionsRun" style="direction: rtl;
                   border:none; border-bottom: 1px solid gray;" class="form-control text-center">
-                    <option value="">اختار معدل</option>
-                    <option value="سريع">سريع</option>
-                    <option value="متوسط">متوسط</option>
-                    <option value="بطئ"> بطئ</option>
-                  </select>
-                  <div *ngIf="this.RegistrationForm.invalid" class="error">
+
+                      <option value="">
+
+                        معدل نشاط الجري
+
+                      </option>
+                      <option value="سريع">سريع</option>
+                      <option value="متوسط">متوسط</option>
+                      <option value="بطئ"> بطئ</option>
+
+
+                    </select>
+
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-person-running fa-xl ms-2" style="color: rgb(69, 172, 76);"></i>
+                    </span>
+                  </div>
+                  <div
+                    *ngIf="this.RegistrationForm.invalid && confirmPassword?.errors != null && confirmPassword?.touched"
+                    class="error">
                     <p *ngIf="OptionRun?.errors?.['required']" class="text-danger">
                       اختار هدفك من فضلك
                     </p>
@@ -257,38 +330,50 @@
 
                 <div class="div col-lg-3  m-auto">
 
-                  <div class="cont">
-                    <label for="mainDropdown">معدل نشاط المشي</label>
-                    <i class="fa-solid fa-person-walking fl-lg fw-bold ms-3"></i>
+                  <div class="cont input-group">
+                    <!-- <label for="mainDropdown">معدل نشاط المشي</label> -->
+
+
+
+                    <select id="mainDropdown" formControlName="optionsWalk" style="direction: rtl;
+                    border:none; border-bottom: 1px solid gray;" class="form-control text-center">
+                      <option value="">معدل نشاط المشي</option>
+                      <option value="سريع">سريع</option>
+                      <option value="متوسط">متوسط</option>
+                      <option value="بطئ"> بطئ</option>
+                    </select>
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-person-walking fa-xl fw-bold ms-3" style="color: rgb(74, 236, 147);"></i>
+                    </span>
                   </div>
-                  <select id="mainDropdown" formControlName="optionsWalk" style="direction: rtl;
-                  border:none; border-bottom: 1px solid gray;"
-                 class="form-control text-center" >
-                    <option value="">اختار معدل</option>
-                    <option value="سريع">سريع</option>
-                    <option value="متوسط">متوسط</option>
-                    <option value="بطئ"> بطئ</option>
-                  </select>
-                  <div *ngIf="this.RegistrationForm.invalid" class="error">
+                  <div
+                    *ngIf="this.RegistrationForm.invalid && confirmPassword?.errors != null && confirmPassword?.touched"
+                    class="error">
                     <p *ngIf="OptionWalk?.errors?.['required']" class="text-danger">
                       اختار هدفك من فضلك
                     </p>
                   </div>
                 </div>
                 <div class="div col-lg-3  m-auto">
-                 <div class="cont">
-                  <label for="mainDropdown">معدل نشاط النوم</label>
-                  <i class="fa-solid fa-bed fl-xxl ms-3"></i>
-                </div>
-                  <select id="mainDropdown" formControlName="optionsSleep"  style="direction: rtl;
-                   border:none; border-bottom: 1px solid gray;"
-                  class="form-control text-center" >
-                    <option value="">اختار معدل</option>
-                    <option value="سريع">سريع</option>
-                    <option value="متوسط">متوسط</option>
-                    <option value="بطئ"> بطئ</option>
-                  </select>
-                  <div *ngIf="this.RegistrationForm.invalid" class="error">
+                  <div class="cont  input-group">
+                    <!-- <label for="mainDropdown">معدل نشاط النوم</label> -->
+
+
+                    <select id="mainDropdown" formControlName="optionsSleep" style="direction: rtl;
+                   border:none; border-bottom: 1px solid gray;" class="form-control text-center">
+                      <option value=""> معدل نشاط النوم</option>
+                      <option value="سريع">سريع</option>
+                      <option value="متوسط">متوسط</option>
+                      <option value="بطئ"> بطئ</option>
+                    </select>
+
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-bed fa-xl " style="color: rgb(35, 55, 242);"></i>
+                    </span>
+                  </div>
+                  <div
+                    *ngIf="this.RegistrationForm.invalid && confirmPassword?.errors != null && confirmPassword?.touched"
+                    class="error">
                     <p *ngIf="OptionSleep?.errors?.['required']" class="text-danger">
                       اختار هدفك من فضلك
                     </p>
@@ -297,38 +382,41 @@
 
               </div>
 
-<!--  -->
+              <!--  -->
               <div class="row">
+                <div class="form-outline mb-5">
+                  <div class="input-group">
+                    <input type="password" id="password" formControlName="password" style="direction: rtl;
+                  border:none; border-bottom: 1px solid gray;" class="form-control text-center"
+                      placeholder=" ادخل كلمه السر" />
+                    <span class="input-group-text">كلمه السر &nbsp;
+                      <i class="fa fa-solid fa-lock fa-lg"></i>
+                    </span>
+                  </div>
+                  <div *ngIf="password?.errors != null && password?.touched">
+                    <p *ngIf="password?.errors?.['required']" class="text-danger">
+                      برجاء ادخال كلمه السر
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <!--  -->
+              <div class="row mt-1">
                 <div class="form-outline mb-4">
                   <div class="input-group">
-                  <input type="password" id="password" formControlName="password" style="direction: rtl;
-                  border:none; border-bottom: 1px solid gray;" class="form-control text-center" placeholder=" ادخل كلمه السر" />
-                 <span class="input-group-text">
-                  <i class="fa fa-solid fa-lock fa-lg"></i>
-                </span>
-              </div>
-                 <label class="form-label" for="password">كلمة السر</label>
-                </div>
-                <div *ngIf="password?.errors != null && password?.touched">
-                  <p *ngIf="password?.errors?.['required']" class="text-danger">
-                    برجاء ادخال كلمه السر
-                  </p>
+                    <input type="password" id="confirmPassword" formControlName="confirmPassword" style="direction: rtl;
+                  border:none; border-bottom: 1px solid gray;" class="form-control text-center"
+                      placeholder=" تأكيد كلمه السر" />
+                    <span class="input-group-text">تأكيد كلمه السر &nbsp;
+                      <i class="fa fa-solid fa-lock fa-lg"></i>
+                    </span>
+                  </div>
 
                 </div>
-              </div>
- <!--  -->
-              <div class="row">
-                <div class="form-outline mb-4">
-                  <div class="input-group">
-                  <input type="password" id="confirmPassword" formControlName="confirmPassword" style="direction: rtl;
-                  border:none; border-bottom: 1px solid gray;" class="form-control text-center" placeholder=" تأكيد كلمه السر" />
-                  <span class="input-group-text">
-                  <i class="fa fa-solid fa-lock fa-lg"></i>
-                </span>
-              </div>
-                  <label class="form-label" for="confirmPassword"> تأكيد كلمة السر </label>
-                </div>
-                
+
                 <div *ngIf="confirmPassword?.errors != null && confirmPassword?.touched">
                   <p *ngIf="confirmPassword?.errors?.['required']" class="text-danger">
                     برجاء ادخال كلمه السر
@@ -336,14 +424,15 @@
 
                 </div>
               </div>
-<!--  -->
-              <div class="row text-center">
-                <button type="submit" id="loginBtn" class="btn btnB btn-block mb-4" [disabled]="RegistrationForm.invalid" (click)="goPage()">
+              <!--  -->
+
+              <div>
+                <button type="submit" id="loginBtn" class="btn btnB btn-block mb-4 mt-4"
+                  [disabled]="RegistrationForm.invalid" (click)="goPage()">
                   تسجيل
                 </button>
-                
-              </div>
 
+              </div>
 
             </form>
           </div>

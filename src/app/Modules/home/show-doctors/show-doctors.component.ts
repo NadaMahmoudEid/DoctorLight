@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HomepageComponent } from '../homepage/homepage.component';
+import { HomeServicesService } from '../home-services.service';
 
 @Component({
   selector: 'app-show-doctors',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./show-doctors.component.scss']
 })
 export class ShowDoctorsComponent {
-
+  constructor(private homeService: HomeServicesService) { }
+  close() {
+    this.homeService.CloseDoctors()
+  }
 }

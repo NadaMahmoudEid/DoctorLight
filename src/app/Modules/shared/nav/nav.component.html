@@ -1,26 +1,62 @@
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"
-   style="position: fixed; width: 100%; background-color: white; z-index: 99;">
-    <div class="container">
-      <div class="d-flex align-items-center">
-        <a href="#"><img src="assets/logo.png" width="20%"></a>
-        <span class="navbar-text fontColor" style="font-weight: bold; font-size: large; margin-left: 1.8rem; color: #163A66;  ">
-        
-             
-             <span style="font-weight: bold;  font-size: x-large; color: #163A66; ">Doctor</span>Diet
-           
-
-        </span>
-      </div>
-      <div class="navbar-collapse justify-content-end">
-        <div class="navbar-nav mt-3">
-          <a id="loginBtn" class="btn me-3 mb-2 shared" style="border-radius: 20px; width: 100%;" href="/Register"
-           routerLink="Register">التسجيل </a>
-          <a id="loginBtn" class="btn mb-2 shared" style="border-radius: 20px; width: 100%;" href="/Login"> الدخول</a>
-        </div>
-      </div>
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="Home"><img src="assets/logo.png" width="20%"></a>
+    <div class="navbar-text flex-grow-1 text-center">
+      <span style="font-weight: bold; font-size: x-large; color: #163A66;">Doctor </span>Diet
     </div>
-  </nav>
-  <div style="height: 180px;"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav" style="margin-left: 40%;">
+        <li class="nav-item">
+          <a id="loginBtn" class="btn mb-2 shared" style="border-radius: 20px; width: 100%;"
+            routerLink="/DoctorDashboard"> متابعة</a>
+        </li>
+        <li class="nav-item">
+          <a id="loginBtn" class="btn mb-2 ms-1 shared" style="border-radius: 20px; width: 100%;" routerLink="Profile">
+            الملف&nbsp;الشخصي</a>
+        </li>
+        <li class="nav-item">
+          <a id="loginBtn" class="btn mb-2 mx-1 shared" style="border-radius: 20px; width: 100%;" routerLink="Plan">
+            خطتك</a>
+        </li>
+        <li class="nav-item">
+          <a id="loginBtn" class="btn mb-2 shared" style="border-radius: 20px; width: 100%;" routerLink="/Login">
+            الدخول</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand"  routerLink="Home"><img src="assets/logo.png" width="100" height="70"></a>
+    <a class="navbar-brand stop1" style="font-weight: bold; font-size: x-large; color: #0f62c6;">Doctor Diet</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse stop" id="navbarNavDropdown" >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  routerLink="/DoctorDashboard"> متابعة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Profile">
+            الملف&nbsp;الشخصي</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Plan">
+            خطتك</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Login">
+            الدخول</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

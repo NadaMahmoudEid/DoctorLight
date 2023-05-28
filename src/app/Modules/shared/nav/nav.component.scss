@@ -19,6 +19,23 @@ body {
   height: 35px;
   width: 35px;
 }
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: #0f62c6;
+  padding: 10px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition:.3s;
+  position: relative;
+  z-index: 2;
+}
+nav ul li a:hover{
+  
+color: #0f62c6;;
+border-bottom: 1px solid #0f62c6;;
+
+}
 .navbar {
   height: auto; /* Allow the height to adjust based on content */
   padding-top: 10px; /* Adjust the top padding as desired */
@@ -56,3 +73,17 @@ body {
     padding: 0.2rem 0.5rem; /* Adjust the button padding as desired */
   }
 }
+.stop {
+  margin-left: 22%;  
+  }
+.stop1 {
+  margin-left: 38%;  
+  }
+  @media screen and (max-width: 767px) {
+    .stop {
+    margin-left: 0px;  
+    }
+    .stop1{
+      margin-left: 0px;
+    }
+  }

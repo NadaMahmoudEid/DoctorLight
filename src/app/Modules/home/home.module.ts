@@ -10,6 +10,7 @@ import { ShowDoctorsComponent } from './show-doctors/show-doctors.component';
   declarations: [
     HomepageComponent,
     ShowDoctorsComponent
+
   ],
 
 

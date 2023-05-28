@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +8,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private _route:Router) { }
   RegistrationForm = this.formBuilder.group({
     userName: ['', [Validators.required, Validators.minLength(5)]],
     fullName: ['', [Validators.required, Validators.minLength(3)]],
@@ -25,6 +26,8 @@ export class RegisterComponent {
     optionsRun: ['', [Validators.required]],
     optionsWalk: ['', [Validators.required]],
     optionsSleep: ['', [Validators.required]],
+    Gender: ['', [Validators.required]],
+    KindOfFoodDidnotNeed: ['',],
     // optionsGoal: ['', [Validators.required]]
     password: ['', [Validators.required]],
     confirmPassword: ['', [Validators.required]]
@@ -69,19 +72,24 @@ export class RegisterComponent {
   get weight() {
     return this.RegistrationForm.get('weight');
   }
+  get Gender() {
+    return this.RegistrationForm.get('Gender');
+  }
 
 
   onSubmit() {
     if (this.RegistrationForm.valid) {
       console.log('Form submitted!');
       console.log('Selected options:', this.RegistrationForm.value);
+      this._route.navigate(['Login']);
+
     } else {
       console.log('Please check at least one option.');
       console.log('Selected options:', this.RegistrationForm.value)
     }
   }
 
-  goPage(){
+  goPage() {
 
   }
 }

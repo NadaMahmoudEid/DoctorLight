@@ -1,6 +1,7 @@
-body {
+body{
     font-family: 'Readex Pro', sans-serif;
     overflow-x:hidden;
+    background-color: #a51c1c;
 }
 #bodyContent{
 
@@ -23,6 +24,11 @@ background-position-y: top;
 .container-fluid{
     padding: 0;
 
+}
+@media screen and (max-width: 967px) {
+  .container-fluid {
+      width: 600px;
+  }
 }
 .textColor {
     color: #2a5a94;
@@ -136,12 +142,12 @@ input.searchInput::placeholder {
 }
 
 .geeks{
-    width: 200px;
+    width: 50%;
     height: 2px;
     position: relative;
-    top: 54%;
-    left: 37%;
-    transform: translate(-100%, -49%);
+    top: 45%;
+    left: 25%;
+    transform: translateX(-50%);
 }
 
 .geeks::before {
@@ -169,7 +175,7 @@ input.searchInput::placeholder {
     left: 0;
     width: 100%;
     height: 100%;
-  
+
     animation: animate 5s linear infinite;
 }
 
@@ -243,7 +249,7 @@ input.searchInput::placeholder {
     border-bottom: 2px solid #6195f5
 }
 .paragraph {
-   
+
     font-size: 20px;
     line-height: 1.5;
     color:#163A66;
@@ -259,89 +265,161 @@ paragraph:hover {
     background-color: #e0e0e0;
 }
 .fixed-paragraph {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 10px;
-    background-color: #f2f2f2;
-    color: #333;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    bottom: 350px;
-    left: 10px;  
-    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.7);
-    animation: upAndDownAnimation 3s infinite;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  color: #333;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  bottom: 350px;
+  left: 10px;
+  z-index: 155;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.7);
+  animation: upAndDownAnimation 3s infinite;
+}
+
+@keyframes upAndDownAnimation {
+  0% {
+    transform: translateY(0);
   }
-  
-  @keyframes upAndDownAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  50% {
+    transform: translateY(-10px);
   }
-  
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 .fixed-paragraph button {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .fixed-paragraph i {
-    margin-left: 10px;
-    cursor: pointer;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .fixed-paragraph i:hover {
-    color: #007bff;
+  color: #007bff;
 }
+.hidden {
+    display: none;
+  }
+//Start Landing
+.landing{
+  min-height: 100vh;
+  background-image: url(../../../../assets/background.jpg);
+  background-size: cover;
+  background-color: #1f2021;
+  position: relative;
+}
+/* to make image less bright*/
+.landing .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb( 0 0 0 /60%);
+  top: 0;
+  left: 0;
+}
+.landing .text{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-10%);
+  background-color: rgb(15 116 143 /60%);
+  padding: 50px;
+  width: 35%;
+  color: white;
+  //to make content start from the end
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width :767px ) {
+  .landing .text{
+      width: 100%;
+  }
+  .landing .text .content{
+      width: 100%;
+  }
+
+
+}
+.landing .text .content{
+  //to make content start from the end
+  max-width: 500px;
+}
+
+.landing .text .content h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: bolder;
+
+}
+.landing .text .content h2 span{
+  font-size: 27px;
+  font-weight: 400;
+
+}
+.landing .text .content p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+// /End Landibg/
+
+/* Start Design */
+.design{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 600px;
+  background-image: url(../../../../assets/doctor.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 22px;
+  color: #1C4980;
+}
+.design .image,
+.design .text{
+  position: relative;
+  z-index: 2;
+  flex: 1;
+
+}
+.design .image {
+ text-align: center;
+}
+@media (max-width: 767px) {
+ .design .image {
+   display: none;
+ }
+}
+.design .image img {
+ position: relative;
+ bottom: -150px;
+}
+.design .text {
+ color: white;
+ padding: 50px;
+ background-color: rgb(15 116 143 /60%);
+}
+.design .text h2 {
+ font-weight: normal;
+ text-transform: uppercase;
+ margin-bottom: 40px;
+}
+
 .btnB{
     background-color: #163A66;
     color: #ccc;
     }
-
-
-  .hiddenSectionForDoc {
-  
-    background: gray; /* Background color of the container */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 199;
- 
-  }
-  
- 
-  .card {
-    /* CSS styles for the card */
-  }
-  
-  .hidden {
-    display: none; /* Hide the div by default */
-  }
-
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-  }
-  
-  .fixed-paragraph {
-    /* Your existing styles */
-  }
-  
-  .show-overlay {
-    display: block;
-  }
-  
+/* End Design */

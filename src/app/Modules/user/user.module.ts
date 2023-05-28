@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
+import { PlanComponent } from './plan/plan.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ProfileComponent,
+    PlanComponent
+  ],
   imports: [
     CommonModule
   ]
